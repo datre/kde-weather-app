@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "",
+                "Name": "Weather Widget contributors"
+            }
+        ],
+        "Category": "Weather",
+        "Description": "A detailed weather forecast for your desktop",
+        "Icon": "weather-clear",
+        "Id": "org.example.skycast",
+        "License": "GPL-3.0-or-later",
+        "Name": "Skycast Weather"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

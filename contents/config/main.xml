@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 https://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name="" />
+    <group name="General">
+        <entry name="locationName" type="String">
+            <default>Berlin</default>
+        </entry>
+        <entry name="latitude" type="Double">
+            <default>52.52</default>
+        </entry>
+        <entry name="longitude" type="Double">
+            <default>13.405</default>
+        </entry>
+        <entry name="temperatureUnit" type="String">
+            <default>celsius</default>
+        </entry>
+    </group>
+</kcfg>
