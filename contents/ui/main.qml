@@ -258,7 +258,7 @@ PlasmoidItem {
         var url = "https://api.open-meteo.com/v1/forecast?latitude=" + latitude
                 + "&longitude=" + longitude
             + "&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m,surface_pressure,dew_point_2m,visibility,uv_index"
-                + "&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_speed_10m"
+                + "&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_speed_10m,is_day"
                 + "&daily=weather_code,temperature_2m_mean,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max,precipitation_sum,uv_index_max,wind_speed_10m_max"
                 + "&temperature_unit=" + unitName
                 + "&wind_speed_unit=kmh&timezone=auto&forecast_days=7"
@@ -281,6 +281,7 @@ PlasmoidItem {
                         precipitation: result.hourly.precipitation_probability[index],
                         precipitationAmount: result.hourly.precipitation[index],
                         windSpeed: result.hourly.wind_speed_10m[index],
+                        isDay: result.hourly.is_day[index],
                         code: result.hourly.weather_code[index]
                     }
                 })
@@ -723,7 +724,7 @@ PlasmoidItem {
                                             horizontalAlignment: Text.AlignHCenter
                                         }
                                         Kirigami.Icon {
-                                            source: root.weatherIcon(modelData.code, true)
+                                            source: root.weatherIcon(modelData.code, Number(modelData.isDay) === 1)
                                             width: 24
                                             height: 24
                                             anchors.horizontalCenter: parent.horizontalCenter
